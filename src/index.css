@@ -1,0 +1,60 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@variants group-hover, hover, focus {
+  .banana {
+    color: yellow;
+  }
+}
+
+@variants focus, hover {
+  .rotate-0 {
+    transform: rotate(0deg);
+  }
+  .rotate-90 {
+    transform: rotate(90deg);
+  }
+}
+
+@responsive {
+  .bg-gradient-brand {
+    background-image: linear-gradient(blue, green);
+  }
+}
+
+@screen sm {
+  /* ... */
+}
+
+*{
+  @apply box-border;
+}
+
+@layer components{
+  .btn{
+    @apply my-4 py-2 px-4 font-semibold rounded-lg shadow-md;
+  }
+}
+
+.btn-green{
+  @apply text-white bg-green-500 hover:bg-green-700;
+}
+
+.card-sm{
+  @apply p-6 my-6 max-w-sm mx-auto bg-white shadow-md rounded-xl flex items-center space-x-4;
+}
+
+.card-lg{
+  @apply max-w-lg mx-auto flex rounded-lg shadow-lg bg-white my-6;
+}
+
+.card-lg_img{
+  @apply flex-shrink-0 rounded-lg;
+}
+
+.centerezed{
+  @apply mx-auto text-center;
+  cursor: pointer;
+}
